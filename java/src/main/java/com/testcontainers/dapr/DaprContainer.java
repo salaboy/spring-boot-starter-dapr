@@ -59,9 +59,10 @@ public class DaprContainer extends GenericContainer<DaprContainer> {
                         cmd.getHostConfig().withNetworkMode("container:" + getContainerId());
                     });
 
-            components.add(new Component("statestore", "state.redis", Map.of()));
+            //components.add(new Component("statestore", "state.redis", Map.of()));
 
-//            components.add(new Component("statestore", "state.in-memory", Map.of()));
+            components.add(new Component("statestore", "state.in-memory", Map.of()));
+            components.add(new Component("pubsub", "pubsub.in-memory", Map.of()));
         }
 
         super.doStart();
