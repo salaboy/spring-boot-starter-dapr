@@ -1,4 +1,4 @@
-package com.testcontainers.dapr;
+package io.diagrid.dapr;
 
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.Network;
@@ -62,7 +62,7 @@ public class DaprContainer extends GenericContainer<DaprContainer> {
             //components.add(new Component("statestore", "state.redis", Map.of()));
 
             components.add(new Component("statestore", "state.in-memory", Map.of()));
-            components.add(new Component("pubsub", "pubsub.in-memory", Map.of()));
+            //components.add(new Component("pubsub", "pubsub.in-memory", Map.of()));
         }
 
         super.doStart();

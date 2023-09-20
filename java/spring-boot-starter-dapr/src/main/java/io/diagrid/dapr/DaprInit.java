@@ -1,4 +1,4 @@
-package com.testcontainers.dapr;
+package io.diagrid.dapr;
 
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
@@ -8,7 +8,7 @@ import java.util.Map;
 
 public interface DaprInit {
     
-    DaprContainer dapr = new DaprContainer("daprio/daprd:1.11.3", "write-app")
+    DaprContainer dapr = new DaprContainer("daprio/daprd:1.11.3", "dapr-app")
             .withNetwork(Network.SHARED)
             .withComponent( "pubsub", "pubsub.in-memory", Map.ofEntries())
             .withComponent("statestore", "statestore.in-memory", Map.ofEntries());
