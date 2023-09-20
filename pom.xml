@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>com.github.salaboy</groupId>
 			<artifactId>testcontainers-dapr</artifactId>
-			<version>bda2263e51</version>
+			<version>16db6675e277bb4518f53e8cf08664cef154599c</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
