@@ -6,7 +6,7 @@ import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.Network;
 import java.util.Map;
 
-public interface DaprInit {
+public interface DaprLocal {
     
     DaprContainer dapr = new DaprContainer("daprio/daprd:1.11.3", "dapr-app")
             .withNetwork(Network.SHARED)
